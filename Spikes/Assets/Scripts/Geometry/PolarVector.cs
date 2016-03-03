@@ -47,15 +47,6 @@ namespace Assets.Scripts.Geometry
         public Vector3 Cartesian { get; protected set; }
         public Vector3 WorldCartesian { get; protected set; }
 
-        /// <summary>
-        /// Used for constructing the mesh.
-        /// This property would not usually end up in a generic polar vector
-        /// class but I have decided to put it here to keep the class hierarchy
-        /// simpler. I recommend creating a mesh vertex class which holds a
-        /// property to the position (a polar vector) and the vertex index.
-        /// </summary>
-        public int VertexIndex { get; set; }
-
         private Vector3 ToCartesianVector()
         {
             return new Vector3(Radius * Mathf.Cos(Azimuth), 0, Radius * Mathf.Sin(Azimuth));
